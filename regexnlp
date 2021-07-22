@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+from __future__ import absolute_import
+
+import util.logger as logger
+import pkg_resources
+import sys;
+
+import click
+
+import commons.config as config 
+import utils.helper as utils;
+
+VERSION = pkg_resources.require("regexnlp")[0].version  
+
+@click.group()
+@click.version_option(version=VERSION, prog_name='regexnlp')
+def regexnlp():  # pragma: no cover
+    pass
+
+
+if __name__ == '__main__':  # pragma: no cover
+    regexnlp()
